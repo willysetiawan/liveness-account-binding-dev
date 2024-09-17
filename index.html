@@ -75,21 +75,22 @@
             if (i > -1) {
               loop();
             } else {
-				const urlParams = new URLSearchParams(window.location.search);
-				const paramKey = urlParams.get('key');
-				const paramMerchantId = urlParams.get('merchantId');
-                const paramUserName = urlParams.get('uName');
-                const paramToken = urlParams.get('token');
-                const paramRefreshToken = urlParams.get('refreshToken');
-                const paramBindingType = urlParams.get('bindingType');
-                const paramBindingValue = urlParams.get('bindingValue');
-                const paramDepositAcc = urlParams.get('depositAcc');
-                const paramExternalId = urlParams.get('externalId');
-                const paramPartnerId = urlParams.get('partnerId');
-                const paramChannelId = urlParams.get('channelId');
-                const paramDeviceId = urlParams.get('deviceId');
+              const urlParams = new URLSearchParams(window.location.search);
+              const paramKey = urlParams.get('key');
+              const paramBindingToken = urlParams.get('bindingToken');
+              // const paramMerchantId = urlParams.get('merchantId');
+              // const paramUserName = urlParams.get('uName');
+              const paramToken = urlParams.get('token');
+              const paramRefreshToken = urlParams.get('refreshToken');
+              // const paramBindingType = urlParams.get('bindingType');
+              // const paramBindingValue = urlParams.get('bindingValue');
+              // const paramDepositAcc = urlParams.get('depositAcc');
+              // const paramExternalId = urlParams.get('externalId');
+              // const paramPartnerId = urlParams.get('partnerId');
+              // const paramChannelId = urlParams.get('channelId');
+              // const paramDeviceId = urlParams.get('deviceId');
 
-				window.location.href ="https://dev-snap-web-view.bankina.id/liveness?key="+paramKey+"&merchantId="+paramMerchantId+"&uName="+paramUserName+"&token="+paramToken+"&refreshToken="+paramRefreshToken+"&bindingType="+paramBindingType+"&bindingValue=" + paramBindingValue + "&depositAcc=" + paramDepositAcc + "&externalId=" + paramExternalId + "&partnerId=" + paramPartnerId + "&channelId=" + paramChannelId + "&deviceId=" + paramDeviceId;
+				      window.location.href ="https://dev-snap-web-view.bankina.id/liveness?key="+paramKey+"&bindingToken="+paramBindingToken+"&token="+paramToken+"&refreshToken="+paramRefreshToken;
             }
           }, 1000);
         }
